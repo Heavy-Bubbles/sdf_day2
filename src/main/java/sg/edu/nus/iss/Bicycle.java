@@ -1,6 +1,6 @@
 package sg.edu.nus.iss;
 
-public class Bicycle {
+public class Bicycle implements Startable {
     private int gear;
     private int speed;
 
@@ -26,14 +26,14 @@ public class Bicycle {
             this.speed = speed;
     }
 
-    public void applyBrake (int decreaseValue){
+    /*public void applyBrake (int decreaseValue){
         speed = speed - decreaseValue;
-        // speed -= decreaseValue;
+         speed -= decreaseValue;
     }
 
     public void speedUp (int increaseValue) {
         speed += increaseValue;
-    }
+    }*/
 
 //@Override means overiding the default method of the class
     @Override //help to generate different objects created
@@ -66,7 +66,15 @@ public class Bicycle {
         return "Bicycle [gear=" + gear + ", speed=" + speed + "]";
     }
 
-    
+    @Override
+    public void applyBrake(int decreaseValue) {
+        speed = speed - decreaseValue;
+    }
 
-    
+    @Override
+    public void speedUp(int increaseValue) {
+        speed += increaseValue;
+
+  
+}
 }
