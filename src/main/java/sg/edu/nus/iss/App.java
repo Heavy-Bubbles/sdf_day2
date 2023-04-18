@@ -8,6 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //System.out.println( "Hello World!" );
+
+        mountainBike mountainBike = new mountainBike(5, 10, 20);
+        System.out.println(mountainBike.toString());
     }
 }
